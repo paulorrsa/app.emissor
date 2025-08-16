@@ -72,7 +72,7 @@ async function handleFormSubmit(event) {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/enviar-formulario', {
+        const response = await fetch('https://emissor.eternasoftware.com.br/api/enviar-formulario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

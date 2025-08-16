@@ -4,9 +4,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-//teste
+
 // Middlewares
-app.use(cors());
+app.use(cors({
+    origin: ['https://emissor.eternasoftware.com.br', 'http://localhost:3000'],
+    methods: ['POST'],
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.static('.')); // Serve arquivos estáticos da pasta atual
 
