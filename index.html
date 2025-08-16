@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissor de Notas Online - Sistema para Emitir NF-e, NFS-e, NFC-e | Eterna Software</title>
+    <meta name="description"
+        content="Sistema online para emitir qualquer tipo de nota fiscal: NF-e, NFS-e, NFC-e,  CT-e, CTe-OS , MDF-e. Emissão ilimitada, 100% online, seguro e homologado. Experimente grátis!">
+    <meta name="keywords"
+        content="emissor de notas online, sistema para emitir nota fiscal, emissão de NF-e, nota fiscal digital, NFS-e, NFC-e,">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Emissor de Notas Online - Sistema para Emitir NF-e, NFS-e, NFC-e">
+    <meta property="og:description"
+        content="Emita qualquer tipo de nota fiscal de forma simples e rápida. Sistema 100% online, seguro e homologado.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://emissor.eternasoftware.com.br/">
+    <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#inicio"><img src="./assets/logo.svg" alt="Logo eterna software" class="logo-image"></a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="nav-desktop">
+                    <button onclick="scrollToSection('inicio')">Início</button>
+                    <button onclick="scrollToSection('planos')">Planos</button>
+                    <button onclick="scrollToSection('recursos')">Recursos</button>
+                    <button onclick="scrollToSection('contato')">Contato</button>
+                    <a href="#planos" class="btn-primary">Adquira Agora</a>
+                    <a href="https://nfe.eternasoftware.com.br/login/" class="btn-primary" target="_blank">Login</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg id="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden">
+                <nav>
+                    <button onclick="scrollToSection('inicio')">Início</button>
+                    <button onclick="scrollToSection('planos')">Planos</button>
+                    <button onclick="scrollToSection('recursos')">Recursos</button>
+                    <button onclick="scrollToSection('contato')">Contato</button>
+                    <button class="btn-primary">Adquira Agora</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Emita qualquer tipo de
+                            <span class="highlight">nota fiscal</span> de forma
+                            <span class="highlight">simples e rápida</span>
+                        </h1>
+                        <p class="hero-description">
+                            Emita NF-e, NFS-e, NFC-e, CT-e, CTe-OS , MDF-e, recibos e outros documentos fiscais em
+                            segundos,
+                            de qualquer lugar. Sistema 100% online.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="scrollToSection('planos')">
+                                Quero meu emissor agora
+                                <svg style="margin-left: 0.5rem;" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12,5 19,12 12,19"></polyline>
+                                </svg>
+                            </button>
+                            <button class="btn-secondary" onclick="scrollToSection('recursos')">
+                                Conhecer recursos
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/sistema.png" alt="Sistema de emissão de notas fiscais" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="planos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Escolha o plano ideal para seu negócio</h2>
+                <p class="section-subtitle">
+                    Planos flexíveis que crescem com sua empresa
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Básico</h3>
+                        <p class="pricing-description">Ideal para pequenos negócios</p>
+                        <div class="pricing-price">
+                            <span class="amount">R$ 49,90</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Até 100 notas/mês</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>NF-e e NFC-e</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Suporte por email</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Relatórios</span>
+                            </li>
+                        </ul>
+                        <button class="btn-primary pricing-button">Escolher Plano</button>
+                    </div>
+                </div>
+
+                <div class="card pricing-card popular">
+                    <span class="badge">Mais Popular</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Profissional</h3>
+                        <p class="pricing-description">Mais popular entre nossos clientes</p>
+                        <div class="pricing-price">
+                            <span class="amount">R$ 69,90</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Até 500 notas/mês</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Todos os tipos de nota</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Suporte prioritário</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Relatórios</span>
+                            </li>
+
+                        </ul>
+                        <button class="btn-primary btn-blue pricing-button">Escolher Plano</button>
+                    </div>
+                </div>
+
+                <div class="card pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Empresarial</h3>
+                        <p class="pricing-description">Para grandes volumes</p>
+                        <div class="pricing-price">
+                            <span class="amount">R$ 99,90</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Notas ilimitadas</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Todos os tipos de nota</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Suporte 24/7</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="9,11 12,14 22,4"></polyline>
+                                </svg>
+                                <span>Relatórios</span>
+                            </li>
+
+                        </ul>
+                        <button class="btn-primary pricing-button">Escolher Plano</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Benefits Section -->
+    <section id="recursos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que escolher nosso sistema?</h2>
+                <p class="section-subtitle">
+                    Desenvolvido especialmente para facilitar a vida do empresário brasileiro
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Todas as suas notas em um só lugar (Destaque) -->
+                <div class="card benefit-card highlight">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: FileText, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Todas as suas notas em um só lugar</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">NF-e, NFS-e, NFC-e, recibos e muito mais em uma única plataforma</p>
+                    </div>
+                </div>
+
+                <!-- 100% online -->
+                <div class="card benefit-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: Cloud, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17.5 19a4.5 4.5 0 0 0 0-9A7 7 0 0 0 5 12.5a5 5 0 0 0 0 10h12.5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Acesse de qualquer lugar</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Acesse de qualquer lugar, a qualquer hora, sem instalação</p>
+                    </div>
+                </div>
+
+                <!-- Emita notas em poucos cliques -->
+                <div class="card benefit-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: MousePointer, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="3 3 21 21 3 21 3 3"></polygon>
+                                <line x1="12" y1="12" x2="22" y2="2"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Emita notas em poucos cliques</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Interface intuitiva que qualquer pessoa consegue usar</p>
+                    </div>
+                </div>
+
+                <!-- Conte com especialistas, não robôs -->
+                <div class="card benefit-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: Headphones, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2z">
+                                </path>
+                                <path d="M3 19a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Conte com especialistas, não robôs</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Equipe técnica pronta para ajudar quando você precisar</p>
+                    </div>
+                </div>
+
+                <!-- Emissão ilimitada -->
+                <div class="card benefit-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: Infinity, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18.5 13.5a4 4 0 1 0-5.7-5.7l-5.6 5.6a4 4 0 1 0 5.7 5.7l5.6-5.6z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Emita sem limites</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Emita quantas notas precisar, sem limitações</p>
+                    </div>
+                </div>
+
+                <!-- Tranquilidade fiscal garantida -->
+                <div class="card benefit-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <!-- Feather icon: Shield, laranja -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Tranquilidade fiscal garantida</h3>
+                    </div>
+                    <div class="card-content">
+                        <p class="card-description">Certificado digital e homologação junto à Receita Federal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">
+                    Tire suas principais dúvidas sobre nosso sistema
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item" data-faq-id="certificado">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Preciso ter um Certificado Digital para usar o sistema?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Sim, para emitir notas fiscais eletrônicas (NF-e, NFS-e, etc.) é necessário ter um certificado
+                        digital válido.
+                        O certificado pode ser do tipo A1, e nosso sistema é compatível com todos os principais
+                        certificados do mercado.
+                        Se você ainda não possui um, podemos auxiliar na aquisição através de nossos parceiros
+                        certificadores.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-faq-id="municipio">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Meu município é atendido pela emissão de NFS-e?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Atendemos a maioria dos municípios brasileiros que possuem sistema próprio de emissão de NFS-e.
+                        Nossa equipe está constantemente atualizando e homologando novos municípios.
+                        Entre em contato conosco informando sua cidade e verificaremos a disponibilidade específica para
+                        seu município.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-faq-id="cancelamento">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        O que acontece se eu quiser cancelar o plano?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Nossos planos são flexíveis e sem fidelidade. Você pode cancelar a qualquer momento sem multa ou
+                        taxas adicionais.
+                        Ao cancelar, você terá acesso ao sistema até o final do período já pago.
+                        Além disso, disponibilizamos todos os seus dados e documentos fiscais para download antes do
+                        encerramento.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-faq-id="ilimitado">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        A emissão de notas é realmente ilimitada?
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        Sim, em nosso plano Empresarial a emissão é totalmente ilimitada. Você pode emitir quantas notas
+                        precisar sem custos adicionais.
+                        Nos planos Básico e Profissional, há limites mensais de 100 e 500 notas respectivamente, mas
+                        você pode aumentar esses limites
+                        fazendo um upgrade de plano a qualquer momento.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ainda tem dúvidas? Fale conosco!</h2>
+                <p class="section-subtitle">
+                    Nossa equipe está pronta para ajudar você
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Envie sua mensagem</h3>
+                        <p class="card-description">
+                            Responderemos em até 2 horas úteis
+                        </p>
+                    </div>
+                    <div class="card-content">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="nome" placeholder="Seu nome completo" class="form-input"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Seu melhor e-mail" class="form-input"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="whatsapp" placeholder="WhatsApp (com DDD)" class="form-input"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="mensagem" placeholder="Como podemos ajudar você?" rows="4"
+                                    class="form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-blue">
+                                <span class="button-text">Enviar mensagem</span>
+                                <span class="button-loading" style="display: none;">
+                                    <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" stroke-width="4" stroke-dasharray="32" stroke-dashoffset="32"></circle>
+                                    </svg>
+                                    Enviando...
+                                </span>
+                            </button>
+                            <div id="form-message" class="form-message"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-content">
+                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <div class="contact-details">
+                                <h3>Telefone</h3>
+                                <p>(94) 99944-1569</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-content">
+                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div class="contact-details">
+                                <h3>E-mail</h3>
+                                <p>suporte@eternasoftware.com.br</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-content">
+                            <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div class="contact-details">
+                                <h3>Endereço</h3>
+                                <p>
+                                    Rua Santa Maria, 08 - Parauapebas/PA<br>
+                                    CEP: 68515-000
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="/assets/logo.svg" alt="eterna software logo" class="footer-logo">
+                    <p>
+                        O sistema de emissão de notas fiscais mais completo e fácil de usar do Brasil.
+                    </p>
+                    <div class="social-icons">
+                        <svg class="social-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                        <svg class="social-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="https://www.finansim.com.br/converter-xml-para-danfe" target="_blank">Converter
+                                XML</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contato">Central de Ajuda</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#">Cidades homologadas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">LGPD</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eterna software. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
