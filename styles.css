@@ -1,0 +1,62 @@
+/*
+  Este arquivo contém os estilos personalizados para o site Emissor Fiscal Fácil.
+  Ele complementa as classes utilitárias do Tailwind CSS.
+*/
+
+:root {
+    --primary-color: #00b4a0;
+    --secondary-color: #009688;
+    --accent-color: #00796b;
+    --light-color: #f1f5f9;
+    --dark-color: #004d40;
+    --gray-color: #455a64;
+    --border-color: #00695c;
+    --gradient-primary: linear-gradient(135deg, #00b4a0 0%, #009688 100%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Estilos da Seção Hero */
+.hero-gradient {
+    background: var(--gradient-primary);
+}
+
+/* Estilos para Botões de Chamada para Ação (CTA) */
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px rgba(0, 180, 160, 0.4);
+}
+
+/* Estilos para o Seletor de Preços (Mensal/Anual) */
+.pricing-toggle-bg {
+    background-color: #e5e7eb;
+}
+
+.pricing-toggle-button {
+    transition: all 0.3s ease;
+    color: var(--gray-color);
+}
+
+.pricing-toggle-button.active {
+    background-color: white;
+    color: var(--dark-color);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Classes de Cores Personalizadas */
+.text-primary { color: var(--primary-color); }
+.bg-primary { background-color: var(--primary-color); }
+.hover\:bg-secondary:hover { background-color: var(--secondary-color); }
+.text-dark { color: var(--dark-color); }
+.bg-dark { background-color: var(--dark-color); }
+.text-gray-custom { color: var(--gray-color); }
+.bg-light { background-color: var(--light-color); }
+.border-accent { border-color: var(--accent-color); }
+.text-accent { color: var(--accent-color); }
